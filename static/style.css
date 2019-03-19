@@ -1,0 +1,41 @@
+.color-button {
+background-color: #6ba083 !important;
+}
+
+.color-menu {
+background-color: #6ba083 !important;
+}
+.menu-a-color {
+color: #ffffff !important;
+font-weight: bold !important;
+}
+.color-h-green {
+color: #6ba083 !important;
+}
+
+.color-a-brown{
+color: #4f323b !important;
+}
+
+.color-label-brown{
+color: #4f323b !important;
+}
+
+.centered{
+text-align: center !important;
+}
+
+article{
+ min-height: 80%;
+}
+
+footer{
+ min-height: 20%;
+background-color: #6ba083 !important;
+color: #ffffff !important;
+
+}
+
+h1.color-h-green{
+margin-top: 5% !important;
+}

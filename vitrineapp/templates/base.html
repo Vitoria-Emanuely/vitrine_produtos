@@ -1,0 +1,42 @@
+<html>
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'semantic/semantic.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Fábrica</title>
+</head>
+<body>
+<header class="ui menu color-menu">
+    <a class="active item menu-a-color" href="#">
+        <span>
+            <i class="ui home icon"></i>
+        </span>
+    </a>
+</header>
+<article class="ui stackable grid">
+    {% block content %}
+
+    {% endblock %}
+
+</article>
+<footer class="ui centered middle aligned stackable grid">
+    <div class="one wide column">
+        <a href='http://ifc.edu.br'>
+            <img class="ui image centered tiny" src="{% static "image/logo-ifc-vertical-branco.png" %}" alt="Logo Instituto Federal Catarinense">
+        </a>
+    </div>
+    <div class="eight wide column">
+        <p class="ui center aligned basic segment">
+            <span>Instituto Federal de Educação, Ciência e Tecnologia Catarinense</span><br>
+            <span>Rua das Missões, 100 - CEP 89051-000 - Blumenau - SC - Fone (47) 3331-7800</span>
+        </p>
+    </div>
+    <div class="one wide column">
+        <a href='http://fabricadesoftware.ifc.edu.br'>
+            <img class="ui image centered tiny" src="{% static "image/logo-fabrica.png" %}"
+                 alt="Logo Fábrica de Software">
+        </a>
+    </div>
+</footer>
+</body>
+</html>
