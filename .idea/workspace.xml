@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8942c990-26fe-47c3-9da2-f19bb5169320" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vitrineapp/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vitrineapp/url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitrineapp/templates/cadastro_usuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitrine_produtos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vitrine_produtos/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitrine_produtos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vitrine_produtos/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitrineapp/templetes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vitrineapp/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitrineapp/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vitrineapp/views/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vitrineapp/views/index_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/vitrineapp/views/index_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitrineapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vitrineapp/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vitrineapp/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+            <state relative-caret-position="465">
+              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vitrineapp/templates/cadastro_usuario.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -118,6 +121,7 @@
         <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/vitrineapp/templates/base.html" />
         <option value="$PROJECT_DIR$/vitrineapp/templates/index.html" />
+        <option value="$PROJECT_DIR$/vitrineapp/templates/cadastro_usuario.html" />
       </list>
     </option>
   </component>
@@ -237,12 +241,12 @@
       <updated>1552588347219</updated>
       <workItem from="1552588371148" duration="4084000" />
       <workItem from="1553012002796" duration="2056000" />
-      <workItem from="1553014065547" duration="7237000" />
+      <workItem from="1553014065547" duration="8559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13377000" />
+    <option name="totallyTimeSpent" value="14699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
@@ -382,8 +386,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vitrineapp/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="465">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vitrineapp/templates/cadastro_usuario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
