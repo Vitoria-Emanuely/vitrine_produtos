@@ -18,5 +18,6 @@ from django.conf.urls import url
 from vitrineapp import views
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name="index")
+    url(r'^$', views.IndexView.as_view(), name="index"),
+    url(r'^usuario/cadastro/$', views.CadastroUsuarioView.as_view(), name="cadastro_usuario")
 ]
