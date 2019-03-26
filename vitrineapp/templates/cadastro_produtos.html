@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="two wide column"></div>
+<div class="twelve wide column">
+    <h1 class="color-h-green">Cadastro de produto</h1>
+    <form class="ui form segment" method="post" action="{% url 'vitrine:cadastro_produto' %}">
+        {% csrf_token %}
+        <div class="field">
+            <label class="color-label-brown">Nome</label>
+            {{ form.nome_produto }}
+        </div>
+        <div class="field">
+            <label class="color-label-brown">Categoria</label>
+            {{ form.id_categoria }}
+        </div>
+        <div class="ui grid">
+            <div class="sixteen wide column">
+                <button type="submit" class="ui green button color-button right floated">Salvar</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

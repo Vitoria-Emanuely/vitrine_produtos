@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group
 from django.shortcuts import render, redirect
 from django.views import View
@@ -22,3 +23,18 @@ class CadastroUsuarioView(View):
             usuario.save()
             return redirect('vitrine:index')
         return render(request, self.template, {'form': form})
+
+class LoginView(View):
+    def post(self, request):
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is None or not user.is_active:
+            return redirect('vitrine:index')
+        login(request, user)
+        return redirect('vitrine:lista_produtos')
+
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect('vitrine:index')

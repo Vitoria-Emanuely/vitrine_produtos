@@ -1,2 +1,4 @@
 from vitrineapp.views.index_view import IndexView
-from vitrineapp.views.usuario_view import CadastroUsuarioView
+from vitrineapp.views.produto_view import ListaProdutoView, CadastroProdutoView
+from vitrineapp.views.usuario_view import CadastroUsuarioView, LoginView, LogoutView
+

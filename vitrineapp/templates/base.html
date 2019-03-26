@@ -12,6 +12,11 @@
             <i class="ui home icon"></i>
         </span>
     </a>
+    <a class="active item menu-a-color right" href="{% url 'vitrine:logout' %}">
+        <span>
+            <i class="sign out alternate ui icon"></i>
+        </span>
+    </a>
 </header>
 <article class="ui stackable grid">
     {% block content %}

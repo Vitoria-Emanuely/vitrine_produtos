@@ -19,5 +19,9 @@ from vitrineapp import views
 
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name="index"),
-    url(r'^usuario/cadastro/$', views.CadastroUsuarioView.as_view(), name="cadastro_usuario")
+    url(r'^usuario/cadastro/$', views.CadastroUsuarioView.as_view(), name="cadastro_usuario"),
+    url(r'^login$', views.LoginView.as_view(), name='login'),
+    url(r'^lista_produtos$', views.ListaProdutoView.as_view(), name='lista_produtos'),
+    url(r'^produto/cadastro$', views.CadastroProdutoView.as_view(), name='cadastro_produto'),
+    url(r'^logout$', views.LogoutView.as_view(), name='logout')
 ]

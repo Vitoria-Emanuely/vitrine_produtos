@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="one wide column"></div>
+
+<div class="four wide column">
+    <div class="ui padded segment">
+        <h3 class="ui header centered color-h-green">
+            Olá, {{ user.get_short_name|default:user.get_username }}!
+        </h3>
+        <a class="ui submit green button fluid labeled icon color-button"
+           href="{% url 'vitrine:cadastro_produto' %}">
+            <i class="box icon"></i>
+            Cadastrar produto
+        </a>
+    </div>
+</div>
+{% endblock %}

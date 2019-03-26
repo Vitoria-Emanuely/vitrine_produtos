@@ -11,7 +11,7 @@
                 </h2>
             </div>
             <div class="row">
-                    <form class='ui form' method="POST" action="">
+                    <form class='ui form' method="POST" action="{% url 'vitrine:login' %}">
                         {% csrf_token %}
                         <div class="field">
                             <label class="color-label-brown">Usuário</label>
