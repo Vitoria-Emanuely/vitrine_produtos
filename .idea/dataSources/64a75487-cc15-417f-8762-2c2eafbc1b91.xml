@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="? - db.sqlite3">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.14">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.15">
     <root id="1">
       <ServerVersion>3.25.1</ServerVersion>
     </root>
@@ -513,31 +513,41 @@ model</ColNames>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="117" parent="19" name="vitrineapp_produtomodel_id_categoria_id_d779de37">
+    <column id="117" parent="19" name="descricao_produto">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="19" name="preco_produto">
+      <Position>5</Position>
+      <DataType>decimal|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="119" parent="19" name="vitrineapp_produtomodel_id_categoria_id_d779de37">
       <ColNames>id_categoria_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="118" parent="19">
+    <key id="120" parent="19">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="119" parent="19">
+    <foreign-key id="121" parent="19">
       <ColNames>id_categoria_id</ColNames>
       <RefTableName>vitrineapp_categoriamodel</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
     </foreign-key>
-    <column id="120" parent="20" name="user_ptr_id">
+    <column id="122" parent="20" name="user_ptr_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="121" parent="20">
+    <key id="123" parent="20">
       <ColNames>user_ptr_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="122" parent="20">
+    <foreign-key id="124" parent="20">
       <ColNames>user_ptr_id</ColNames>
       <RefTableName>auth_user</RefTableName>
       <RefColNames>id</RefColNames>

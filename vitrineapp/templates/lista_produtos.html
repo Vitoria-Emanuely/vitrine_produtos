@@ -3,6 +3,7 @@
 {% block content %}
 <div class="one wide column"></div>
 
+    {% if user.is_superuser %}
 <div class="four wide column">
     <div class="ui padded segment">
         <h3 class="ui header centered color-h-green">
@@ -15,6 +16,7 @@
         </a>
     </div>
 </div>
+    {% endif %}
 
 <div class="ten wide column">
     {% if lista_produtos %}
@@ -26,6 +28,8 @@
                 <i class="box icon"></i>
                 <div class="content">
                     {{ produto.nome_produto }}
+                    {{ produto.preco_produto }}
+                    {{ produto.descricao_produto }}
                 </div>
             </div>
             {% endfor %}

@@ -13,15 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+
+from django.urls import path
 
 from vitrineapp import views
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name="index"),
-    url(r'^usuario/cadastro/$', views.CadastroUsuarioView.as_view(), name="cadastro_usuario"),
-    url(r'^login$', views.LoginView.as_view(), name='login'),
-    url(r'^lista_produtos$', views.ListaProdutoView.as_view(), name='lista_produtos'),
-    url(r'^produto/cadastro$', views.CadastroProdutoView.as_view(), name='cadastro_produto'),
-    url(r'^logout$', views.LogoutView.as_view(), name='logout')
+    path('', views.IndexView.as_view(), name="index"),
+    path('usuario/cadastro/', views.CadastroUsuarioView.as_view(), name="cadastro_usuario"),
+    path('login', views.LoginView.as_view(), name='login'),
+    path('lista_produtos', views.ListaProdutoView.as_view(), name='lista_produtos'),
+    path('produto/cadastro', views.CadastroProdutoView.as_view(), name='cadastro_produto'),
+    path('logout', views.LogoutView.as_view(), name='logout')
 ]
