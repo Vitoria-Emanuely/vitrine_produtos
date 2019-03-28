@@ -15,4 +15,28 @@
         </a>
     </div>
 </div>
+
+<div class="ten wide column">
+    {% if lista_produtos %}
+    <div class="ui padded segment">
+        <h2 class="ui header">Produtos</h2>
+        <div class="ui large relaxed list">
+            {% for produto in lista_produtos %}
+            <div class="item">
+                <i class="box icon"></i>
+                <div class="content">
+                    {{ produto.nome_produto }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <div class="ui placeholder segment">
+        <div class="ui centered header">
+            Nada por aqui ainda!
+        </div>
+         </div>
+    {% endif %}
+</div>
 {% endblock %}
