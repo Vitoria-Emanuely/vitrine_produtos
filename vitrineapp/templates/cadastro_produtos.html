@@ -23,7 +23,12 @@
             {{ form.id_categoria }}
         </div>
         <div class="ui grid">
-            <div class="sixteen wide column">
+            <a class="ui green button color-button left floated"
+           href="{% url 'vitrine:cadastro_cate' %}">
+            <i class="plus icon"></i>
+            Cadastrar categoria
+            </a>
+            <div class="thirteen wide column">
                 <button type="submit" class="ui green button color-button right floated">Salvar</button>
             </div>
         </div>
