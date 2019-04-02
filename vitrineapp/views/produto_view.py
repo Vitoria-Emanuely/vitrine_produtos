@@ -28,13 +28,12 @@ class ListaProdutoView(View):
 
     def search(self, query):
         if query:
-
-            id_categoria = CategoriaModel.objects.filter(desc_categoria=query).first().id
-            return {'lista_produtos':
-                        ProdutoModel.objects.filter(Q(id_categoria=id_categoria))
-                    }
-
-
+            id_categoria = CategoriaModel.objects.filter(desc_categoria=query).last().id
+            todos_produtos = ProdutoModel.objects.filter(Q(id_categoria=id_categoria))
+            return todos_produtos
+        else:
+            lista_produtos = ProdutoModel.objects.all()
+            return lista_produtos
 
 class CadastroProdutoView(View):
     template = 'cadastro_produtos.html'

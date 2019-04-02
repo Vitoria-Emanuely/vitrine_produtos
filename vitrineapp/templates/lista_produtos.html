@@ -25,14 +25,13 @@
     <form method="get" action="{% url 'vitrine:lista_produtos' %}">
     <div class="ui search">
         <div class="ui icon input">
-            <input class="prompt" name="q" type="text" placeholder="Buscar..." value= "{{request.GET.q}}">
-                <input type="submit" value="search"><i class="search icon"></i>
+            <input class="prompt" name="q" type="text" placeholder="Pesquise aqui..." value= "{{request.GET.q}}">
+                <input type="submit" value="Buscar"><i class="search icon"></i>
         </div>
     <div class="results"></div>
     </div>
     </form>
         <div class="ui large relaxed list">
-
             {% for produto in lista_produtos %}
             <div class="item">
                 <i class="box icon"></i>

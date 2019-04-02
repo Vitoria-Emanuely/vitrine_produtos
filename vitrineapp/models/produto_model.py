@@ -9,9 +9,9 @@ class ProdutoModel(Model):
     id_categoria = models.ForeignKey('CategoriaModel', on_delete=models.CASCADE)
 
     def __unicode__(self):
-        return self.nome_produto, self.preco_produto, self.descricao_produto
+        return self.nome_produto
 
     def __str__(self):
-        return self.nome_produto, self.preco_produto, self.descricao_produto
+        return self.nome_produto
 
 
