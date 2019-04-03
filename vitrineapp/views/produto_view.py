@@ -21,13 +21,15 @@ class ListaProdutoView(View):
         }
         if 'q' in request.GET:
             objeto['lista_produtos'] = self.search(request.GET['q'])
-        #TODO
         if not request.user.is_authenticated:
             return HttpResponseRedirect('/')
         return render(request, self.template, objeto)
 
     def search(self, query):
         if query:
+            if not CategoriaModel.objects.filter(desc_categoria=query):
+                lista_produtos = ProdutoModel.objects.all()
+                return lista_produtos
             id_categoria = CategoriaModel.objects.filter(desc_categoria=query).last().id
             todos_produtos = ProdutoModel.objects.filter(Q(id_categoria=id_categoria))
             return todos_produtos
