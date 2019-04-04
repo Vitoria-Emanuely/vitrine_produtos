@@ -42,9 +42,8 @@
             <tbody>
             {% for produto in lista_produtos %}
                 <tr>
-                <td><i class="box icon"></i></td>
-
-                    <td>{{ produto.nome_produto }}</td>
+                    <td><i class="box icon"></i></td>
+                    <td><a href="{% url 'vitrine:detalhe_produto' pk=produto.id%}">{{ produto.nome_produto }}</a></td>
                     <td>{{ produto.preco_produto }}</td>
                     <td>{{ produto.descricao_produto }}</td>
                     <td>{{ produto.id_categoria }}</td>

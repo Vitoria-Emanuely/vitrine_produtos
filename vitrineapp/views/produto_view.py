@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 
 from vitrineapp.forms import ProdutoForm
@@ -52,3 +52,10 @@ class CadastroProdutoView(View):
             form.save()
             return redirect('vitrine:lista_produtos')
         return render(request, self.template, {'form': form})
+
+class DetalheProdutoView(View):
+    template = 'detalhe_produto.html'
+
+    def get(self, request, pk):
+        produto = get_object_or_404(ProdutoModel, pk=pk)
+        return render(request, self.template, {'produto': produto})

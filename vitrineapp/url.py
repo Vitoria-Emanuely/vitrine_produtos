@@ -25,5 +25,6 @@ urlpatterns = [
     path('lista_produtos', views.ListaProdutoView.as_view(), name='lista_produtos'),
     path('produto/cadastro', views.CadastroProdutoView.as_view(), name='cadastro_produto'),
     path('logout', views.LogoutView.as_view(), name='logout'),
-    path('categoria/cadastro', views.CadastroCateView.as_view(), name='cadastro_cate')
+    path('categoria/cadastro', views.CadastroCateView.as_view(), name='cadastro_cate'),
+    path('produto/<int:pk>/', views.DetalheProdutoView.as_view(), name='detalhe_produto')
 ]
