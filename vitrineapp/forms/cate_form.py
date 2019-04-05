@@ -15,3 +15,4 @@ class CategoriaForm(ModelForm):
     class Meta:
         model = CategoriaModel
         exclude = ()
+

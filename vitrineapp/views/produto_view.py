@@ -1,9 +1,11 @@
 from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.views import View
 
 from vitrineapp.forms import ProdutoForm
+from vitrineapp.forms.produto_form import ComentarioForm
 from vitrineapp.models import ProdutoModel, CategoriaModel
 
 
@@ -37,6 +39,7 @@ class ListaProdutoView(View):
             lista_produtos = ProdutoModel.objects.all()
             return lista_produtos
 
+
 class CadastroProdutoView(View):
     template = 'cadastro_produtos.html'
 
@@ -53,9 +56,24 @@ class CadastroProdutoView(View):
             return redirect('vitrine:lista_produtos')
         return render(request, self.template, {'form': form})
 
+
 class DetalheProdutoView(View):
     template = 'detalhe_produto.html'
 
     def get(self, request, pk):
         produto = get_object_or_404(ProdutoModel, pk=pk)
         return render(request, self.template, {'produto': produto})
+
+    def post(self, request, pk):
+        produto = get_object_or_404(ProdutoModel, pk = pk)
+        if request.method == "POST":
+            form = ComentarioForm(request.POST)
+            if form.is_valid():
+                comentario = form.save(commit=False)
+                comentario.produto = produto
+                produto.save()
+                comentario.save()
+                return redirect(reverse('vitrine:detalhe_produto', args= (produto.id, )))
+        else:
+            form = ComentarioForm()
+        return render(request, self.template, {'form': form})

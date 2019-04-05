@@ -20,4 +20,3 @@ class CadastroCateView(View):
             form.save()
             return redirect('vitrine:cadastro_produto')
         return render(request, self.template, {'form': form})
-

@@ -3,7 +3,7 @@
 {% block content %}
 <div class="one wide column"></div>
 
-    {% if user.is_superuser %}
+{% if user.is_superuser %}
 <div class="four wide column">
     <div class="ui padded segment">
         <h3 class="ui header centered color-h-green">
@@ -11,26 +11,25 @@
         </h3>
         <a class="ui submit green button fluid labeled icon color-button"
            href="{% url 'vitrine:cadastro_produto' %}">
-            <i class="box icon"></i>
-            Cadastrar produto
+            <i class="box icon"></i>Cadastrar produto
         </a>
     </div>
 </div>
-    {% endif %}
+{% endif %}
 
 <div class="ten wide column">
-    {% if lista_produtos %}
-
-        <h2 class="ui header">Produtos</h2>
+    <h2 class="ui header">Produtos</h2>
     <form method="get" action="{% url 'vitrine:lista_produtos' %}">
-    <div class="ui search">
-        <div class="ui icon input">
-            <input class="prompt" name="q" type="text" placeholder="Pesquise aqui..." value= "{{request.GET.q}}">
+        <div class="ui search">
+            <div class="ui icon input">
+                <input class="prompt" name="q" type="text" placeholder="Pesquise aqui..." value= "{{request.GET.q}}">
                 <input type="submit" value="Buscar"><i class="search icon"></i>
+            </div>
+        <div class="results"></div>
         </div>
-    <div class="results"></div>
-    </div>
     </form>
+
+    {% if lista_produtos %}
         <table class="ui celled definition table">
             <thead>
                 <tr><th class="collapsing"></th>
@@ -38,8 +37,10 @@
                 <th>Preço</th>
                 <th>Descrição</th>
                 <th>Categoria</th>
-            </tr></thead>
+                </tr>
+            </thead>
             <tbody>
+
             {% for produto in lista_produtos %}
                 <tr>
                     <td><i class="box icon"></i></td>
@@ -48,17 +49,15 @@
                     <td>{{ produto.descricao_produto }}</td>
                     <td>{{ produto.id_categoria }}</td>
                </tr>
-
             {% endfor %}
+
             </tbody>
         </table>
 
     {% else %}
-    <div class="ui placeholder segment">
-        <div class="ui centered header">
-            Nada por aqui ainda!
+        <div class="ui placeholder segment">
+            <div class="ui centered header">Nada por aqui ainda!</div>
         </div>
-         </div>
     {% endif %}
 </div>
 {% endblock %}

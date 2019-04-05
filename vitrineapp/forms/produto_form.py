@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 
-from vitrineapp.models import CategoriaModel, ProdutoModel
+from vitrineapp.models import CategoriaModel, ProdutoModel, ComentarioModel
 
 
 class ProdutoForm(ModelForm):
@@ -20,3 +20,9 @@ class ProdutoForm(ModelForm):
     class Meta:
         model = ProdutoModel
         exclude = ()
+
+
+class ComentarioForm(ModelForm):
+    class Meta:
+        model = ComentarioModel
+        fields = ('texto', )

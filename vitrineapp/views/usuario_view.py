@@ -24,6 +24,7 @@ class CadastroUsuarioView(View):
             return redirect('vitrine:index')
         return render(request, self.template, {'form': form})
 
+
 class LoginView(View):
     def post(self, request):
         username = request.POST['username']
@@ -33,6 +34,7 @@ class LoginView(View):
             return redirect('vitrine:index')
         login(request, user)
         return redirect('vitrine:lista_produtos')
+
 
 class LogoutView(View):
     def get(self, request):

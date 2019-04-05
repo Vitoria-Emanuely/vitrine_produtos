@@ -1,42 +1,36 @@
 {%  extends 'base.html' %}
 {% block content %}
-
     <div class="row">
         <div class="five wide column"></div>
         <div class="ui six wide column segment">
             <div class="row">
                 <h2 class="ui center aligned icon header color-h-green">
-                    <i class="circular users icon"></i>
-                    Bem vindo
+                    <i class="circular users icon"></i>Bem vindo
                 </h2>
             </div>
             <div class="row">
-                    <form class='ui form' method="POST" action="{% url 'vitrine:login' %}">
-                        {% csrf_token %}
-                        <div class="field">
-                            <label class="color-label-brown">Usuário</label>
-                            <input type="text" name="username" placeholder="Digite o seu usuário" required/>
-                        </div>
-                        <div class="field">
-                            <label class="color-label-brown">Senha</label>
-                            <input type="password" name="password" placeholder="Digite sua senha" required/>
-                        </div>
-                        <button type='submit' class="ui submit green button fluid color-button" value='Entrar'>Entrar</button>
-                    </form>
+                <form class='ui form' method="POST" action="{% url 'vitrine:login' %}">{% csrf_token %}
+                    <div class="field">
+                        <label class="color-label-brown">Usuário</label>
+                        <input type="text" name="username" placeholder="Digite o seu usuário" required/>
+                    </div>
+                    <div class="field">
+                        <label class="color-label-brown">Senha</label>
+                        <input type="password" name="password" placeholder="Digite sua senha" required/>
+                    </div>
+                    <button type='submit' class="ui submit green button fluid color-button" value='Entrar'>Entrar</button>
+                </form>
             </div>
-        <div class="ui basic segment">
-            <div class="ui white fluid label">
-                <h4 class="color-h-green centered">
-                    <a class="color-a-brown" href="{% url 'vitrine:cadastro_usuario' %}">
-                        <i class="plus icon"></i>
-                        Cadastre-se
-                    </a>
-                </h4>
+            <div class="ui basic segment">
+                <div class="ui white fluid label">
+                    <h4 class="color-h-green centered">
+                        <a class="color-a-brown" href="{% url 'vitrine:cadastro_usuario' %}">
+                            <i class="plus icon"></i>Cadastre-se
+                        </a>
+                    </h4>
+                </div>
             </div>
         </div>
-        </div>
-
         <div class="five wide column"></div>
     </div>
-
 {% endblock %}

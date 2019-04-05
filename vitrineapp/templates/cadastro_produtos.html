@@ -4,8 +4,7 @@
 <div class="two wide column"></div>
 <div class="twelve wide column">
     <h1 class="color-h-green">Cadastro de produto</h1>
-    <form class="ui form segment" method="post" action="{% url 'vitrine:cadastro_produto' %}">
-        {% csrf_token %}
+    <form class="ui form segment" method="post" action="{% url 'vitrine:cadastro_produto' %}">{% csrf_token %}
         <div class="field">
             <label class="color-label-brown">Nome</label>
             {{ form.nome_produto }}
@@ -22,17 +21,16 @@
             <label class="color-label-brown">Categoria</label>
             {{ form.id_categoria }}
         </div>
+        {% if user.is_superuser %}
         <div class="ui grid">
-            <a class="ui green button color-button left floated"
-           href="{% url 'vitrine:cadastro_cate' %}" id="cate">
-            <i class="plus icon"></i>
-            Cadastrar categoria
+            <a class="ui green button color-button left floated" href="{% url 'vitrine:cadastro_cate' %}" id="cate">
+                <i class="plus icon"></i>Cadastrar categoria
             </a>
             <div class="thirteen wide column" id="save">
                 <button type="submit" class="ui green button color-button right floated">Salvar</button>
             </div>
         </div>
-
+        {% endif %} }}
     </form>
 </div>
 {% endblock %}

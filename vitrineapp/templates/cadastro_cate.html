@@ -4,8 +4,7 @@
 <div class="two wide column"></div>
 <div class="twelve wide column">
     <h1 class="color-h-green">Cadastro de categoria</h1>
-    <form class="ui form segment" method="post" action="{% url 'vitrine:cadastro_cate' %}">
-        {% csrf_token %}
+    <form class="ui form segment" method="post" action="{% url 'vitrine:cadastro_cate' %}">{% csrf_token %}
         <div class="field">
             <label class="color-label-brown">Nome</label>
             {{ form.desc_categoria }}
@@ -15,7 +14,6 @@
                 <button type="submit" class="ui green button color-button right floated">Salvar</button>
             </div>
         </div>
-
     </form>
 </div>
 {% endblock %}

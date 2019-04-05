@@ -13,5 +13,3 @@ class ProdutoModel(Model):
 
     def __str__(self):
         return self.nome_produto
-
-
